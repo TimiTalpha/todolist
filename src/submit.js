@@ -1,7 +1,7 @@
 const input = document.getElementById('input');
 const Add = document.getElementById('button');
 const list = document.getElementById('todo-list');
-let id = 0;
+let id = localStorage.length;
 
 Add.addEventListener('click', () => {
    const li = document.createElement('li');
