@@ -6,7 +6,7 @@
 }
 
 body{
-  height: 800px;
+  height: 700px;
   background: #fff;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ span{
   background: blue;
   width: 700px;
   height: 500px;
-  position: absolute;
+  position: relative;
   top: 70px;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,16 @@ span{
   height: 250px;
   border-radius: 20px;
   background: honeydew;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+#todo-list::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 li{
   width: 300px;
@@ -88,6 +97,7 @@ li{
   align-items: center;
   border-bottom: solid 1px rgb(0,0,0,0.1);
   font-size: 20px;
+  padding: 5px;
 }
 
 li label {
