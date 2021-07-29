@@ -26,16 +26,15 @@ Add.addEventListener('click', () => {
    const div = document.createElement('div');
    let id = gen(16);
    
-   button.id = "remove-btn";
+   button.id = id;
    div.class = "buttons";
    label.textContent = input.value;
 
    button.type = 'button';
    button.value = "remove";
-   button.name = id;
 
    button.addEventListener('click', () => {
-     localStorage.removeItem(button.name);
+     localStorage.removeItem(button.id);
      li.remove();
    })
    

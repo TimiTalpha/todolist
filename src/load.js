@@ -5,8 +5,7 @@ window.onload = function (){
     const label = document.createElement('label');
     const div = document.createElement('div');
     
-    label.id = localStorage.key(i);
-    button.id = 'remove-btn';
+    button.id = localStorage.key(i);
     button.name = localStorage.key(i);
     label.textContent = localStorage.getItem(localStorage.key(i));
     button.type = 'button';
