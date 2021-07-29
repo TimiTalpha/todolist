@@ -23,25 +23,31 @@ Add.addEventListener('click', () => {
    const li = document.createElement('li');
    const button = document.createElement('input');
    const label = document.createElement('label');
+   const div = document.createElement('div');
    let id = gen(16);
    
-   button.id = id;
+   button.id = "remove-btn";
+   div.class = "buttons";
    label.textContent = input.value;
+
    button.type = 'button';
    button.value = "remove";
+   button.name = id;
+
    button.addEventListener('click', () => {
-         localStorage.removeItem(button.id);
+     localStorage.removeItem(button.name);
      li.remove();
    })
-
+   
+   div.appendChild(button);
    li.appendChild(label);
-   li.appendChild(button);
+   li.appendChild(div)
+   
 
    list.appendChild(li);
    localStorage.setItem(id, input.value);
    
    input.value = "";
-   id++;
    
    console.log(localStorage);
 
